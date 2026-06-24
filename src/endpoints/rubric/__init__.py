@@ -5,15 +5,11 @@ from flask_restx.reqparse import RequestParser
 from src.ext import api
 
 
-# rubric_delete_parser = RequestParser()
-# rubric_delete_parser.add_argument('id',type=int,required = True )
 
 rubric_filter_parser = RequestParser()
 rubric_filter_parser.add_argument('category',type=str,help='Filter by category')
 rubric_filter_parser.add_argument('page',type=int,default=1,help='page filter')
 rubric_filter_parser.add_argument('next',type=int,default =5,help='>')
-
-# rubric_filter_parser.add_argument('next',type=int,required = False,default =1,help='<')
 
 
 rubric_model = api.model('rubric', {

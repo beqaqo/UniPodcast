@@ -10,6 +10,6 @@ class Category(BaseModel):
     videos = db.relationship("Video",back_populates="category")
     rubrics = db.relationship("Rubric",back_populates="category")
 
-
+    
     def __str__(self):
         return self.category

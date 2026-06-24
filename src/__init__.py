@@ -5,7 +5,7 @@ from src.admin_views import AdminUserView, CategoryView, RubricView, VideoView
 from src.config import Config
 from src.ext import db, admin, login_manager,migrate,api
 from src.models import User, Category, Rubric, Video
-from src.commands import init_db,populate_db
+from src.commands import populate_db
 from src.endpoints.category.category import CategoryApi
 from src.endpoints.rubric.rubric import RubricApi
 from src.endpoints.video.video import VideoApi
@@ -27,7 +27,7 @@ def register_extensions(app):
     with app.app_context():
         db.create_all()
 
-    app.cli.add_command(init_db)
+    # app.cli.add_command(init_db)
     app.cli.add_command(populate_db)
 
     @login_manager.user_loader

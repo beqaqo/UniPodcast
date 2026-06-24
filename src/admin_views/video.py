@@ -3,7 +3,6 @@ from uuid import uuid4
 from os import path
 
 from src.admin_views import generate_unique_name
-# თავიდან რომ არ ვწერო ფუნქცია
 from src.admin_views.base import SecureModelView
 
 

@@ -11,7 +11,7 @@ class User(BaseModel,UserMixin):
     username = db.Column(db.String,nullable=False)
     _password = db.Column(db.String,nullable=False)
     role = db.Column(db.String, default='admin')
-    #თუ მომავალში საჭირო გახდება ახალი უზერების შემოტანა
+
 
     @property
     def password(self):
@@ -21,5 +21,3 @@ class User(BaseModel,UserMixin):
     def password(self,password):
         self._password = generate_password_hash(password)
    
-    # def check_password(self, password):
-    #     return check_password_hash(self._password, password)
